@@ -1,0 +1,77 @@
+
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* Global Styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 25px;
+    margin: 0 0 10px;
+}
+
+p {
+    margin: 0;
+}
+
+.site-header {
+    background: #333333;
+    padding: 0px 100px;
+}
+
+.site-header .site-logo a {
+    display: block;
+}
+
+.site-header .site-logo a img {
+    width: 20px;
+}
+
+.app__content {
+    padding: 80px 0;
+    background: #eee;
+}
+
+.app__content .container {
+    position: relative;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.p-designation {
+    display: block;
+    font-weight: 500;
+    margin: 0 0 10px;
+}
+
+.user-profile {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    max-width: 150px;
+}
+
+.left-col {
+    width: calc(100% - 200px);
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .site-header {
+        padding: 0 30px;
+    }
+
+}
