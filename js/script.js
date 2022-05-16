@@ -33,12 +33,14 @@ var profilePhoto = document.createElement('img');
 profilePhoto.src = "images/profile-photo@2x.jpg";
 profilePhoto.className = "user-profile";
 
+
 // Insert Inside Header
 app.appendChild(header);
 header.appendChild(logo);
 header.appendChild(navigation);
 logo.append(logoAnchor);
 logoAnchor.appendChild(logoImg);
+
 
 // Insert Inside Navigation
 
@@ -54,5 +56,40 @@ container.appendChild(profilePhoto);
 profileContent.appendChild(profileDesignation);
 profileDesignation.appendChild(profileDesignationText);
 profileContent.appendChild(profileContentText);
+
+
+
+// Digital Clock
+const clock = document.getElementById("digitalclock");
+
+function dClock() {
+    const time = new Date();
+    const hour = time.getHours();
+    const min = time.getMinutes();
+    const second = time.getSeconds();
+    var am_pm = "AM";
+
+    if (hour > 12) {
+        hour -= 12;
+        am_pm = "PM";
+    }
+    if (hour == 0) {
+        hr = 12;
+        am_pm = "AM";
+    }
+
+    let currentTime = hour + ":" + min + ":" + second + am_pm;
+    const paraGraph = document.createElement("p");
+    paraGraph.append(currentTime);
+    while (clock.hasChildNodes()) {
+        clock.removeChild(clock.lastChild);
+    }
+
+    clock.append(paraGraph);
+}
+
+setInterval(dClock, 1000);
+
+
 
 
